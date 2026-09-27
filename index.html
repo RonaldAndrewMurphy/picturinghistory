@@ -6,15 +6,18 @@
   <title>Picturing History — Investigative Historical Deep-Dives</title>
   <style>
     :root {
-      --bg-color: #0f1115;
-      --card-bg: #181b22;
-      --accent: #d97706;
-      --text: #e2e8f0;
-      --text-muted: #94a3b8;
-      --border: #27272a;
+      --bg-color: #f7f4ed;        /* Soft parchment background */
+      --card-bg: #ffffff;          /* Crisp white card background */
+      --accent: #9a3412;           /* Deep terracotta / rust accent */
+      --accent-hover: #7c2d12;
+      --text: #1c1917;             /* Dark charcoal / soft black for high contrast */
+      --text-muted: #57534e;       /* Muted warm grey for secondary text */
+      --border: #d6d3d1;           /* Subtle warm border */
+      --tag-bg: #fef3c7;           /* Light amber background for tags */
+      --tag-text: #78350f;         /* Deep brown tag text */
     }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, Serif, sans-serif;
       background-color: var(--bg-color);
       color: var(--text);
       line-height: 1.6;
@@ -22,100 +25,114 @@
       padding: 0;
     }
     header {
-      border-bottom: 1px solid var(--border);
-      padding: 2rem 1rem;
+      border-bottom: 2px solid var(--border);
+      padding: 2.5rem 1rem 2rem;
       text-align: center;
-      background-color: #12151c;
+      background-color: #efece6;
     }
     header h1 {
       margin: 0;
-      font-size: 2.2rem;
-      letter-spacing: -0.025em;
-      color: #fff;
+      font-size: 2.4rem;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      font-weight: 700;
     }
     header p {
-      margin: 0.5rem 0 0;
+      margin: 0.75rem auto 0;
       color: var(--text-muted);
-      font-size: 1.05rem;
+      font-size: 1.15rem;
+      max-width: 650px;
     }
     nav {
-      margin-top: 1rem;
+      margin-top: 1.25rem;
     }
     nav a {
       color: var(--accent);
       text-decoration: none;
-      margin: 0 10px;
-      font-weight: 500;
+      margin: 0 12px;
+      font-weight: 600;
+      font-size: 1.05rem;
     }
     nav a:hover {
+      color: var(--accent-hover);
       text-decoration: underline;
     }
     main {
-      max-width: 900px;
+      max-width: 850px;
       margin: 3rem auto;
-      padding: 0 1rem;
+      padding: 0 1.25rem;
     }
     .section-title {
-      font-size: 1.4rem;
-      border-bottom: 1px solid var(--border);
+      font-size: 1.1rem;
+      border-bottom: 2px solid var(--border);
       padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.75rem;
       color: var(--text-muted);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
+      font-weight: 700;
     }
     .featured-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.2s, border-color 0.2s;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
     .featured-card:hover {
       border-color: var(--accent);
-      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(154, 52, 18, 0.12);
     }
     .card-content {
-      padding: 1.5rem;
+      padding: 2rem;
     }
     .tag {
       display: inline-block;
-      background: rgba(217, 119, 6, 0.15);
-      color: var(--accent);
-      padding: 0.2rem 0.6rem;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      padding: 0.25rem 0.75rem;
       border-radius: 4px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      border: 1px solid #fde68a;
     }
     .card-title {
-      margin: 0 0 0.5rem;
-      font-size: 1.6rem;
-      color: #fff;
+      margin: 0 0 0.75rem;
+      font-size: 1.8rem;
+      line-height: 1.3;
+      color: var(--text);
     }
     .card-title a {
       color: inherit;
       text-decoration: none;
     }
+    .card-title a:hover {
+      color: var(--accent);
+    }
     .card-excerpt {
-      color: var(--text-muted);
-      margin-bottom: 1.25rem;
+      color: #334155;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
     }
     .card-meta {
-      font-size: 0.85rem;
+      font-size: 0.95rem;
       color: var(--text-muted);
       display: flex;
-      gap: 15px;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-weight: 500;
     }
     footer {
       text-align: center;
       padding: 3rem 1rem;
-      border-top: 1px solid var(--border);
+      border-top: 2px solid var(--border);
       color: var(--text-muted);
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       margin-top: 4rem;
+      background-color: #efece6;
     }
   </style>
 </head>
@@ -125,7 +142,7 @@
     <h1>Picturing History</h1>
     <p>Investigating history's misunderstood moments through deep-dive storytelling and AI visualization.</p>
     <nav>
-      <a href="https://picturinghistory.substack.com" target="_blank">Substack Newsletter</a>
+      <a href="https://picturinghistorycom.substack.com/p/were-the-luddites-really-against" target="_blank">Substack Newsletter</a>
       <a href="#archive">Prompt & Research Archive</a>
     </nav>
   </header>
@@ -137,7 +154,7 @@
       <div class="card-content">
         <span class="tag">Work, Power & Change • 1811–1813</span>
         <h2 class="card-title">
-          <a href="https://picturinghistory.substack.com/p/were-the-luddites-really-against-technology" target="_blank">
+          <a href="https://picturinghistorycom.substack.com/p/were-the-luddites-really-against" target="_blank">
             Were the Luddites Really Against Technology?
           </a>
         </h2>
