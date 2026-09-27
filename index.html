@@ -1,19 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Picturing History</title>
-    <style>
-        body { font-family: system-ui, sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #222; }
-        h1 { color: #111; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .tagline { font-style: italic; color: #555; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Picturing History — Investigative Historical Deep-Dives</title>
+  <style>
+    :root {
+      --bg-color: #0f1115;
+      --card-bg: #181b22;
+      --accent: #d97706;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --border: #27272a;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text);
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 2rem 1rem;
+      text-align: center;
+      background-color: #12151c;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      letter-spacing: -0.025em;
+      color: #fff;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    .section-title {
+      font-size: 1.4rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .featured-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .featured-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .card-content {
+      padding: 1.5rem;
+    }
+    .tag {
+      display: inline-block;
+      background: rgba(217, 119, 6, 0.15);
+      color: var(--accent);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .card-title {
+      margin: 0 0 0.5rem;
+      font-size: 1.6rem;
+      color: #fff;
+    }
+    .card-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .card-excerpt {
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+    .card-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      gap: 15px;
+    }
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 4rem;
+    }
+  </style>
 </head>
 <body>
+
+  <header>
     <h1>Picturing History</h1>
-    <p class="tagline">Investigating historical questions with transparent AI workflows.</p>
-    <hr>
-    <p>Welcome! This site serves as the official archive for reference data, prompt logs, and primary source notes backing our YouTube channel and Substack deep dives.</p>
+    <p>Investigating history's misunderstood moments through deep-dive storytelling and AI visualization.</p>
+    <nav>
+      <a href="https://picturinghistory.substack.com" target="_blank">Substack Newsletter</a>
+      <a href="#archive">Prompt & Research Archive</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="section-title">Featured Investigation</div>
+
+    <article class="featured-card">
+      <div class="card-content">
+        <span class="tag">Work, Power & Change • 1811–1813</span>
+        <h2 class="card-title">
+          <a href="https://picturinghistory.substack.com/p/were-the-luddites-really-against-technology" target="_blank">
+            Were the Luddites Really Against Technology?
+          </a>
+        </h2>
+        <p class="card-excerpt">
+          We use "Luddite" to dismiss people who resist technology. The workers behind the word were asking a harder question: who would control industrial change, who would profit, and who would pay its price?
+        </p>
+        <div class="card-meta">
+          <span>📖 30 min read</span>
+          <span>📍 Nottinghamshire, Yorkshire & Lancashire</span>
+          <span>🎨 8 Historical Reconstructions</span>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; Picturing History. Hosted via Cloudflare Pages & GitHub.</p>
+  </footer>
+
 </body>
 </html>
